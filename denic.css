@@ -1,0 +1,56 @@
+/* CSS file for denic RR
+*/
+
+body {
+    background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.test {
+    background-color: red;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+._productive {
+    background-color: green;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
