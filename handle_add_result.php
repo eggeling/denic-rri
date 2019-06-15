@@ -148,7 +148,7 @@
             $hd_action = "CREATE";
             $fields = "hd_handle, hd_action, hd_type, hd_name, hd_organisation, hd_address, hd_pcode, hd_city, hd_country, hd_phone, hd_fax, hd_email, hd_sip, hd_disclose, hd_remarks_0, hd_remarks_1, hd_remarks_2, hd_remarks_3";
             $values = "\"" . $_POST['hd_handle'] . "\", " . "\"" . $hd_action . "\", " . "\"" . $_POST['hd_type'] . "\", " . "\"" . $_POST['hd_name'] . "\", " . "\"" . $_POST['hd_organisation'] . "\", " . "\"" . $_POST['hd_address'] . "\", " . "\"" . $_POST['hd_pcode'] . "\", " . "\"" . $_POST['hd_city'] . "\", " . "\"" . $_POST['hd_country'] . "\", " . "\"" . $_POST['hd_phone'] . "\", " . "\"" . $_POST['hd_fax'] . "\", " . "\"" . $_POST['hd_email'] . "\", " . "\"" . $_POST['hd_sip'] . "\", " . "\"" . $_POST['hd_disclose'] . "\", " . "\"" . $_POST['hd_remarks_0'] . "\", " . "\"" . $_POST['hd_remarks_1'] . "\", " . "\"" . $_POST['hd_remarks_2'] . "\", " . "\"" . $_POST['hd_remarks_3'] . "\"";
-            $result = $mysqli->query("INSERT INTO denic_handle.denic_handle ( $fields ) VALUES ( $values )");
+            $result = $mysqli->query("INSERT INTO denic.denic_handle ( $fields ) VALUES ( $values )");
             if (!$result) {
                 echo "<p>Could not insert data.!</p>";
             }
