@@ -138,6 +138,7 @@
         if (!preg_match("/RESULT: success/", $place_order)) {
             echo "error placing order!<br>";
         } else {
+            /* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
             require("database.inc");
             $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
             if ($mysqli->connect_error) {
