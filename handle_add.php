@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
-/* Retrieve the country codes from he database..*/
+/* Retrieve the country codes from the database.*/
 $result_cc = $mysqli->query('SELECT cc_id, cc_code, cc_value, cc_description FROM denic.country_code');
 if (!$result_cc) {
     echo "<p>Could not retrieve data.</p>";

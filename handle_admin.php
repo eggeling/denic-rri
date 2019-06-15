@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link href="denic.css" rel="stylesheet" type="text/css"/>
     <title>edit handle</title>
@@ -16,7 +16,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
-/* Retrieve the handles from he database..*/
+/* Retrieve the handles from the database.*/
 $result = $mysqli->query('SELECT hd_id, hd_handle, hd_name FROM denic.denic_handle order by hd_handle');
 if (!$result) {
     echo "<p>Could not retrieve data.</p>";
