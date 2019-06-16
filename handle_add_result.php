@@ -107,7 +107,7 @@
         /* Include credentials for authentication against denic RRI */
         include_once "authentication.php";
 
-        /* include denic functions from GitHub: https://github.com/DENICeG/phprri */
+        /* Include denic functions from GitHub: https://github.com/DENICeG/phprri */
         include_once "functions.php";
 
         /* Create a connection string */
@@ -154,7 +154,7 @@
                 echo "<p>Could not insert data.!</p>";
             }
 
-            // Send the result of the order via e-mail
+            /* Send the result of the order via e-mail */
             $subject = "create handle: " . $_POST['hd_handle'];
             $mailtext = "Connection to: " . $connect_rri;
             $mailtext .= "RRI answer: " . $place_order;
