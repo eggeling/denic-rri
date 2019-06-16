@@ -7,6 +7,7 @@
 <body>
 
 <div class="_head">
+    /* Customize navigation.inc to include your own navigation.*/
     <?php include('navi.inc'); ?>
     <h2>add handle result</h2>
 </div>
