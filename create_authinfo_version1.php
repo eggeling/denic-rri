@@ -27,7 +27,7 @@ if (!$result_domain) {
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
     <?php include('navi.inc'); ?>
-    <h2>create authinfo1</h2>
+    <h2>create authinfo version 1</h2>
 </div>
 
 <div class="_body">
