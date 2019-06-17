@@ -10,7 +10,7 @@ The boolean value from the authentication.php file is used to display the curren
 </ul>
 <ul>
     <li><a href="domain_add.php">add domain</a></li>
-    <li><a href="domain_del.php">delete domain</a></li>
+    <li><a href="domain_delete.php">delete domain</a></li>
     <li><a href="domain_admin.php">edit domain</a></li>
 </ul>
 <ul>
