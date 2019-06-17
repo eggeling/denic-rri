@@ -7,12 +7,13 @@
 <body>
 
 <?php
+
 /* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
 require("database.inc");
 
 $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
 if ($mysqli->connect_error) {
-    die('Connect Error (' . $mysqli->connect_errno . ') '
+    die('Connection error (' . $mysqli->connect_errno . ') '
         . $mysqli->connect_error);
 }
 
@@ -22,7 +23,6 @@ $result_holder = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_admin_c = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_tech_c = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_zone_c = $mysqli->query($sql) or die ("Couldn't execute query.");
-
 if (!$result_holder) {
     echo "<p>Could not retrieve data.</p>";
 }
