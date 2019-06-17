@@ -168,7 +168,7 @@
                 echo "<p>Could not insert data.!</p>";
             }
 
-            // Send the result of the order via e-mail
+            /* Send the result of the order via e-mail */
             $subject = "edit handle: " . $_POST['hd_handle_2'];
             $mailtext = "Connection to: " . $connect_rri;
             $mailtext .= "RRI answer: " . $place_order;
