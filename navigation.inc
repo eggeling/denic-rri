@@ -14,11 +14,11 @@ The boolean value from the authentication.php file is used to display the curren
     <li><a href="domain_admin.php">edit domain</a></li>
 </ul>
 <ul>
-    <li><a href="domain_kk.php">start transfer</a></li>
-    <li><a href="create-authinfo1.php">create authinfo</a></li>
-    <li><a href="create-authinfo2.php">create authinfo2</a></li>
-    <li><a href="delete-authinfo.php">delete authinfo</a></li>
-    <li><a href="transit.php">transit domain</a></li>
+    <li><a href="domain_chprov.php">start transfer</a></li>
+    <li><a href="create_authinfo_version1.php">create authinfo version 1</a></li>
+    <li><a href="delete_authinfo_version1.php">delete authinfo version 1</a></li>
+    <li><a href="create_authinfo_version2.php">create authinfo version 2</a></li>
+    <li><a href="domain_transit.php">transit domain</a></li>
 </ul>
 
 <?php
