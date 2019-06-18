@@ -99,7 +99,7 @@ if (!$result_holder) {
         <input name="dm_ns_3" title="dm_ns_3" size="80"><br>
 
         Dnskey
-        <input name="dm_dkey_1" title="dm_dkey_1" size="80"><br>
+        <input name="dm_key" title="dm_key" size="80"><br>
 
         <input type="submit" value="create domain"><br>
 
