@@ -6,7 +6,6 @@
 </head>
 <body>
 
-
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
     <?php include('navi.inc'); ?>
@@ -28,10 +27,11 @@
         $valid_code = 'false';
     }
 
+    /* When the data is valid submit it via denic RRI.*/
     if ($valid_code == 'true') {
         $ctid = time();
 
-        // create order string
+        /* Create an order string */
         $dm_auth_hash = hash('sha256', $_POST['dm_authinfo']);
         $message = "Action: CREATE-AUTHINFO1" . "\n";
         $message .= "Version: 2.0" . "\n";
@@ -41,13 +41,13 @@
         $message .= "AuthInfoHash: " . $dm_auth_hash . "\n";
         $message .= "AuthInfoExpire: " . $_POST['dm_auth_expire'] . "\n";
 
-        // include authentification
+        /* Include credentials for authentication against denic RRI */
         include_once "authentication.php";
 
-        // include denic functions from GitHub
+        /* Include denic functions from GitHub: https://github.com/DENICeG/phprri */
         include_once "functions.php";
 
-        // create connection string
+        /* Create a connection string */
         if ($productive == 'true') {
             $rri_socket_address = "ssl://rri.denic.de:51131";
             $login_rri = "Version: 2.0\nAction: LOGIN\nUser: $user\nPassword: $password_real\n";
@@ -57,25 +57,26 @@
         }
         $conn = stream_socket_client($rri_socket_address, $errno, $errstr);
 
-        // create logout string
+        /* Create a logout string */
         $logout_rri = "Version: 2.0\naction: LOGOUT\n";
 
-        // connect to RRI
+        /* Connect to denic RRI */
         $connect_rri = handle_RRI_orders($conn, $login_rri);
 
-        // send order to RRI
+        /* Send order to denic RRI */
         $place_order = handle_RRI_orders($conn, $message);
 
-        // close connection
+        /* Close order */
         $close_order = handle_RRI_orders($conn, $logout_rri);
 
-        // close connection
+        /* Close connection */
         fclose($conn);
 
-        // check status of order
+        /* Check status of order and when successful insert data into database */
         if (!preg_match("/RESULT: success/", $place_order)) {
             echo "error placing order!<br>";
         } else {
+            /* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
             require("database.inc");
             $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
             if ($mysqli->connect_error) {
@@ -86,7 +87,8 @@
             if (!$result) {
                 echo "<p>Could not insert data.!</p>";
             }
-            // send result via e-mail
+
+            /* Send the result of the order via e-mail */
             $subject = "create authinfo1: " . $_POST['dm_domain'];
             $mailtext = "Connection to: " . $connect_rri;
             $mailtext .= "RRI answer: " . $place_order;
