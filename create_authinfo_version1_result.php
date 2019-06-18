@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link href="denic.css" rel="stylesheet" type="text/css"/>
-    <title>create authinfo version1</title>
+    <title>create authinfo version 1</title>
 </head>
 <body>
 
