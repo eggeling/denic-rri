@@ -121,7 +121,7 @@
         } else {
             /* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
             require("database.inc");
-            $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, denic);
+            $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass);
             if ($mysqli->connect_error) {
                 die('Connect Error (' . $mysqli->connect_errno . ') '
                     . $mysqli->connect_error);
