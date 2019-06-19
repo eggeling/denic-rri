@@ -26,7 +26,7 @@ if (!$result_domain) {
 
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
-    <?php include('navi.inc'); ?>
+    <?php include('navigation.inc'); ?>
     <h2>create authinfo version 1</h2>
 </div>
 
@@ -43,9 +43,13 @@ if (!$result_domain) {
         echo "\t\t\t\t\t\t\t</select><br>\n";
         ?>
         Authinfo:
-        <input name="dm_authinfo" title="dm_authinfo" size="16" maxlength="16"><br>
+        <label>
+            <input name="dm_authinfo" title="dm_authinfo" size="16" maxlength="16">
+        </label><br>
         Expire:
-        <input name="dm_authexpire" title="dm_authexpire" size="8" maxlength="8"><br>
+        <label>
+            <input name="dm_authexpire" title="dm_authexpire" size="8" maxlength="8">
+        </label><br>
 
         <input type="submit" value="order authinfo1 ">
     </form>
