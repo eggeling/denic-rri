@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link href="denic.css" rel="stylesheet" type="text/css"/>
     <title>transit domain</title>
