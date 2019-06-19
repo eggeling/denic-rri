@@ -85,11 +85,11 @@ if (!$result_holder) {
         ?>
         NServer
         <label>
-            <input name="dm_ns_0" title="dm_ns_0" size="80" value="ns-01.briteline.de">
+            <input name="dm_ns_0" title="dm_ns_0" size="80" value="hostname.domain.tld">
         </label><br>
         NServer
         <label>
-            <input name="dm_ns_1" title="dm_ns_1" size="80" value="ns-02.briteline.de">
+            <input name="dm_ns_1" title="dm_ns_1" size="80">
         </label><br>
         NServer
         <label>
