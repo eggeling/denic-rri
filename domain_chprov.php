@@ -101,7 +101,7 @@ if (!$result_holder) {
         </label><br>
         AuthInfo
         <label>
-            <input name="dm_key" title="dm_key" size="80">
+            <input name="dm_auth" title="dm_auth" size="80">
         </label><br>
 
         <input type="submit" value="transfer domain">
