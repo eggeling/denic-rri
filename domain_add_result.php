@@ -131,7 +131,7 @@
                 $fields = "dm_action, dm_domain, dm_domain_ace, dm_holder, dm_admin, dm_tech, dm_zone, dm_ns_0, dm_ns_1, dm_ns_2, dm_ns_3, dm_ns_4";
                 $values = "\"" . $dm_action . "\", " . "\"" . $_POST['dm_domain'] . "\", " . "\"" . $_POST['dm_domain_ace'] . "\", " . "\"" . $_POST['dm_holder'] . "\", " . "\"" . $_POST['dm_admin'] . "\", " . "\"" . $_POST['dm_tech'] . "\", " . "\"" . $_POST['dm_zone'] . "\", " . "\"" . $_POST['dm_ns_0'] . "\", " . "\"" . $_POST['dm_ns_1'] . "\", " . "\"" . $_POST['dm_ns_2'] . "\", " . "\"" . $_POST['dm_ns_3'] . "\", " . "\"" . $_POST['dm_key'] . "\"";
 
-                $result = $mysqli->query("INSERT INTO denic.denic_domain ( $fields ) VALUES ( $values )");
+                $result = $mysqli->query("INSERT INTO denic.domain ( $fields ) VALUES ( $values )");
                 if (!$result) {
                     echo "<p>Could not retrieve data.</p>";
                 }

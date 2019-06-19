@@ -38,11 +38,13 @@ if (!$result_cc) {
         </label><br>
 
         Type
-        <select title="hd_type" name="hd_type">
-            <option value="PERSON">PERSON</option>
-            <option value="ROLE">ROLE</option>
-            <option value="ORG">ORG</option>
-        </select><br>
+        <label>
+            <select title="hd_type" name="hd_type">
+                <option value="PERSON">PERSON</option>
+                <option value="ROLE">ROLE</option>
+                <option value="ORG">ORG</option>
+            </select>
+        </label><br>
 
         Name<label>
             <input title="hd_name" name="hd_name" size="80" maxlength="255" pattern="[a-zA-Z0-9 ]+">

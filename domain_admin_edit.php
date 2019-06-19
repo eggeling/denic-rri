@@ -16,12 +16,12 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve handles from database.*/
-$sql_handle = "SELECT hd_handle FROM denic_handle.denic_handle group by hd_handle order by hd_handle";
-$sql_holder_selected = "SELECT dm_holder FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
-$sql_admin_selected = "SELECT dm_admin FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
-$sql_tech_selected = "SELECT dm_tech  FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
-$sql_zone_selected = "SELECT dm_zone FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";;
-$sql_fill = "SELECT * FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
+$sql_handle = "SELECT hd_handle FROM denic.handle group by hd_handle order by hd_handle";
+$sql_holder_selected = "SELECT dm_holder FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
+$sql_admin_selected = "SELECT dm_admin FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
+$sql_tech_selected = "SELECT dm_tech  FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
+$sql_zone_selected = "SELECT dm_zone FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";;
+$sql_fill = "SELECT * FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
 
 $result_holder = $mysqli->query($sql_handle);
 $result_holder_selected = $mysqli->query($sql_holder_selected);
@@ -61,10 +61,12 @@ if (!$result_fill) {
 
 <div class="_body">
     <form action="domain_admin_result.php" method="POST">
-        <select name="dm_action" title="dm_action" size="1">
-            <option>CHHOLDER</option>
-            <option selected>UPDATE</option>
-        </select><br>
+        <label>
+            <select name="dm_action" title="dm_action" size="1">
+                <option>CHHOLDER</option>
+                <option selected>UPDATE</option>
+            </select>
+        </label><br>
 
         Domain
         <label>

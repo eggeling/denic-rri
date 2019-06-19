@@ -78,7 +78,7 @@
                     die('Connect Error (' . $mysqli->connect_errno . ') '
                         . $mysqli->connect_error);
                 }
-                $result = $mysqli->query("DELETE FROM denic_rri.denic-domain WHERE dm_domain = '$_POST[dm_domain]';");
+                $result = $mysqli->query("DELETE FROM denic.domain WHERE dm_domain = '$_POST[dm_domain]';");
                 if (!$result) {
                     echo "<p>Could not insert data.!</p>";
                 }

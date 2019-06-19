@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve the selected handle from the database.*/
-$sql_handle = "SELECT hd_id, hd_handle, hd_action, hd_type, hd_name, hd_organisation, hd_address, hd_pcode, hd_city, hd_country, hd_phone, hd_fax, hd_email, hd_sip, hd_remarks_0, hd_remarks_1, hd_remarks_2, hd_remarks_3 FROM denic.denic_handle WHERE denic.denic_handle.hd_id = '$_POST[selected_record]'";
+$sql_handle = "SELECT hd_id, hd_handle, hd_action, hd_type, hd_name, hd_organisation, hd_address, hd_pcode, hd_city, hd_country, hd_phone, hd_fax, hd_email, hd_sip, hd_remarks_0, hd_remarks_1, hd_remarks_2, hd_remarks_3 FROM denic.handle WHERE denic.handle.hd_id = '$_POST[selected_record]'";
 $result_handle = $mysqli->query($sql_handle);
 
 if (!$result_handle) {

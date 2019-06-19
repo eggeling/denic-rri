@@ -162,7 +162,7 @@
                     "hd_remarks_2 = \"" . $_POST['hd_remarks_2_2'] . "\", " .
                     "hd_remarks_3 = \"" . $_POST['hd_remarks_3_2'] . "\"";
 
-                $result = $mysqli->query("UPDATE denic.denic_handle SET $handle_admin WHERE hd_id = '$_POST[hd_id_2]';");
+                $result = $mysqli->query("UPDATE denic.handle SET $handle_admin WHERE hd_id = '$_POST[hd_id_2]';");
                 echo $result;
                 if (!$result) {
                     echo "<p>Could not insert data.!</p>";

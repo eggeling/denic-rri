@@ -16,7 +16,7 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve handles from database.*/
-$sql = "SELECT hd_handle, hd_name FROM denic_handle.denic_handle order by hd_handle";
+$sql = "SELECT hd_handle, hd_name FROM denic.handle order by hd_handle";
 $result_holder = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_admin_c = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_tech_c = $mysqli->query($sql) or die ("Couldn't execute query.");
