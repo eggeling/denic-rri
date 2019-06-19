@@ -30,17 +30,21 @@ if (!$result_holder) {
 
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
-    <?php include('navi.inc'); ?>
+    <?php include('navigation.inc'); ?>
     <h2>create domain</h2>
 </div>
 
 <div class="_body">
     <form action="domain_add_result.php" method="POST">
         Domain
-        <input name="dm_domain" title="dm_domain" size="20"><br>
+        <label>
+            <input name="dm_domain" title="dm_domain" size="20">
+        </label><br>
 
         Domain ACE
-        <input name="dm_domain_ace" title="dm_domain_ace" size="80"><br>
+        <label>
+            <input name="dm_domain_ace" title="dm_domain_ace" size="80">
+        </label><br>
 
         Holder
         <?php
@@ -58,7 +62,7 @@ if (!$result_holder) {
         if ($result_admin_c) {
             echo "<select name=\"dm_admin\" title=\"dm_admin\">";
             while ($row2 = $result_admin_c->fetch_array()) {
-                echo "<option value=\"$row2[0]\">" . $row2[0] . " - " .$row2[1] . "\n";
+                echo "<option value=\"$row2[0]\">" . $row2[0] . " - " . $row2[1] . "\n";
             }
             echo "</select><br>";
         }
@@ -87,19 +91,29 @@ if (!$result_holder) {
         ?>
 
         NServer
-        <input name="dm_ns_0" title="dm_ns_0" size="80"><br>
+        <label>
+            <input name="dm_ns_0" title="dm_ns_0" size="80">
+        </label><br>
 
         NServer
-        <input name="dm_ns_1" title="dm_ns_1" size="80"><br>
+        <label>
+            <input name="dm_ns_1" title="dm_ns_1" size="80">
+        </label><br>
 
         NServer
-        <input name="dm_ns_2" title="dm_ns_2" size="80"><br>
+        <label>
+            <input name="dm_ns_2" title="dm_ns_2" size="80">
+        </label><br>
 
         NServer
-        <input name="dm_ns_3" title="dm_ns_3" size="80"><br>
+        <label>
+            <input name="dm_ns_3" title="dm_ns_3" size="80">
+        </label><br>
 
         Dnskey
-        <input name="dm_key" title="dm_key" size="80"><br>
+        <label>
+            <input name="dm_key" title="dm_key" size="80">
+        </label><br>
 
         <input type="submit" value="create domain"><br>
 

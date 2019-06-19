@@ -7,6 +7,7 @@
 <body>
 
 <?php
+/* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
 require("database.inc");
 $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
 if ($mysqli->connect_error) {
@@ -14,6 +15,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
+/* Retrieve handles from database.*/
 $sql = "SELECT hd_handle, hd_name FROM denic_handle.denic_handle order by hd_handle";
 $result_holder = $mysqli->query($sql) or die ("Couldn't execute query.");
 $result_admin_c = $mysqli->query($sql) or die ("Couldn't execute query.");
@@ -26,16 +28,21 @@ if (!$result_holder) {
 ?>
 
 <div class="_head">
-    <?php include('navi.inc'); ?>
+    /* Customize navigation.inc to include your own navigation.*/
+    <?php include('navigation.inc'); ?>
     <h2>transfer domain</h2>
 </div>
 
 <div class="_body">
-    <form action="domain_kk2.php" method="POST">
+    <form action="domain_chprov_result.php" method="POST">
         Domain
-        <input name="dm_domain" title="dm_domain" size="20"><br>
+        <label>
+            <input name="dm_domain" title="dm_domain" size="20">
+            <br></label>
         Domain ACE
-        <input name="dm_domain_ace" title="dm_domain_ace" size="80"><br>
+        <label>
+            <input name="dm_domain_ace" title="dm_domain_ace" size="80">
+        </label><br>
         Holder
         <?php
         if ($result_holder) {
@@ -77,15 +84,25 @@ if (!$result_holder) {
         }
         ?>
         NServer
-        <input name="dm_ns_0" title="dm_ns_0" size="80" value="ns-01.briteline.de"><br>
+        <label>
+            <input name="dm_ns_0" title="dm_ns_0" size="80" value="ns-01.briteline.de">
+        </label><br>
         NServer
-        <input name="dm_ns_1" title="dm_ns_1" size="80" value="ns-02.briteline.de"><br>
+        <label>
+            <input name="dm_ns_1" title="dm_ns_1" size="80" value="ns-02.briteline.de">
+        </label><br>
         NServer
-        <input name="dm_ns_2" title="dm_ns_2" size="80"><br>
+        <label>
+            <input name="dm_ns_2" title="dm_ns_2" size="80">
+        </label><br>
         NServer
-        <input name="dm_ns_3" title="dm_ns_3" size="80"><br>
+        <label>
+            <input name="dm_ns_3" title="dm_ns_3" size="80">
+        </label><br>
         AuthInfo
-        <input name="dm_key" title="dm_key" size="80"><br>
+        <label>
+            <input name="dm_key" title="dm_key" size="80">
+        </label><br>
 
         <input type="submit" value="transfer domain">
     </form>

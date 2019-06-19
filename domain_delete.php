@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
-$sql = "SELECT dm_id, dm_domain, dm_domain_ace from denic_rri.denic_domain group by dm_domain ORDER BY `denic_domain`.`dm_domain` ASC;";
+$sql = "SELECT dm_id, dm_domain, dm_domain_ace from denic_rri.denic_domain group by dm_domain ORDER BY `denic_domain`.`dm_domain`;";
 $result = $mysqli->query($sql) or die ("Couldn't execute query.");
 
 if (!$result) {
@@ -27,7 +27,7 @@ if (!$result) {
 
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
-    <?php include('navi.inc'); ?>
+    <?php include('navigation.inc'); ?>
     <h2>delete domain</h2>
 </div>
 

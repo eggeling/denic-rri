@@ -7,6 +7,7 @@
 <body>
 
 <?php
+/* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
 require("database.inc");
 $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
 if ($mysqli->connect_error) {
@@ -14,6 +15,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
+/* Retrieve domains from database.*/
 $sql = "SELECT dm_id, dm_domain, dm_domain_ace FROM denic_handle.denic_domain group by dm_domain order by dm_domain";
 $result = $mysqli->query($sql);
 if (!$result) {
@@ -22,12 +24,14 @@ if (!$result) {
 ?>
 
 <div class="_head">
-    <?php include('navi.inc');?>
+    /* Customize navigation.inc to include your own navigation.*/
+    <?php include('navigation.inc'); ?>
     <h2>transit domain</h2>
 </div>
+
 <div class="_body">
 
-    <form action="transit2.php" method="POST">
+    <form action="domain_transit_result.php" method="POST">
         <?php
         echo "<select name=\"dm_domain\">\n";
         while ($row = $result->fetch_array(MYSQLI_NUM)) {

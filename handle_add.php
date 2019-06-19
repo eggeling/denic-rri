@@ -25,7 +25,7 @@ if (!$result_cc) {
 ?>
 
 <div class="_head">
-/* Customize navigation.inc to include your own navigation.*/
+    /* Customize navigation.inc to include your own navigation.*/
     <?php include('navigation.inc'); ?>
     <h2>add handle</h2>
 </div>
@@ -33,7 +33,9 @@ if (!$result_cc) {
 <div class="_body">
     <form action="handle_add_result.php" method="POST">
         Handle
-        <input type="text" title="hd_handle" name="hd_handle" size="32" maxlength="32"><br>
+        <label>
+            <input type="text" title="hd_handle" name="hd_handle" size="32" maxlength="32">
+        </label><br>
 
         Type
         <select title="hd_type" name="hd_type">
@@ -42,19 +44,29 @@ if (!$result_cc) {
             <option value="ORG">ORG</option>
         </select><br>
 
-        Name<input title="hd_name" name="hd_name" size="80" maxlength="255" pattern="[a-zA-Z0-9 ]+"><br>
+        Name<label>
+            <input title="hd_name" name="hd_name" size="80" maxlength="255" pattern="[a-zA-Z0-9 ]+">
+        </label><br>
 
         Organisation
-        <input title="hd_organisation" name="hd_organisation" size="80" maxlength="255"><br>
+        <label>
+            <input title="hd_organisation" name="hd_organisation" size="80" maxlength="255">
+        </label><br>
 
         Address
-        <input title="hd_address" name="hd_address" size="80" maxlength="255"><br>
+        <label>
+            <input title="hd_address" name="hd_address" size="80" maxlength="255">
+        </label><br>
 
         PostalCode
-        <input title="hd_pcode" name="hd_pcode" size="20"><br>
+        <label>
+            <input title="hd_pcode" name="hd_pcode" size="20">
+        </label><br>
 
         City
-        <input title="hd_city" name="hd_city" size="80"><br>
+        <label>
+            <input title="hd_city" name="hd_city" size="80">
+        </label><br>
 
         CountryCode
         <?php
@@ -68,31 +80,49 @@ if (!$result_cc) {
         ?>
 
         Phone
-        <input title="hd_phone" name="hd_phone" size="80"><br>
+        <label>
+            <input title="hd_phone" name="hd_phone" size="80">
+        </label><br>
 
         Fax
-        <input title="hd_fax" name="hd_fax" size="80"><br>
+        <label>
+            <input title="hd_fax" name="hd_fax" size="80">
+        </label><br>
 
         E-Mail
-        <input title="hd_email" type="email" name="hd_email" size="80"><br>
+        <label>
+            <input title="hd_email" type="email" name="hd_email" size="80">
+        </label><br>
 
         SIP
-        <input title="hd_sip" name="hd_sip" size="80"><br>
+        <label>
+            <input title="hd_sip" name="hd_sip" size="80">
+        </label><br>
 
         Disclose
-        <input title="hd_disclose" name="hd_disclose" size="80"><br>
+        <label>
+            <input title="hd_disclose" name="hd_disclose" size="80">
+        </label><br>
 
         Remarks
-        <input title="hd_remarks_0" name="hd_remarks_0" size="80"><br>
+        <label>
+            <input title="hd_remarks_0" name="hd_remarks_0" size="80">
+        </label><br>
 
         Remarks
-        <input title="hd_remarks_1" name="hd_remarks_1" size="80"><br>
+        <label>
+            <input title="hd_remarks_1" name="hd_remarks_1" size="80">
+        </label><br>
 
         Remarks
-        <input title="hd_remarks_2" name="hd_remarks_2" size="80"><br>
+        <label>
+            <input title="hd_remarks_2" name="hd_remarks_2" size="80">
+        </label><br>
 
         Remarks
-        <input title="hd_remarks_3" name="hd_remarks_3" size="80"><br>
+        <label>
+            <input title="hd_remarks_3" name="hd_remarks_3" size="80">
+        </label><br>
 
         <input type="submit" value="add handle">
     </form>

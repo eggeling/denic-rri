@@ -15,12 +15,12 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
+/* Retrieve handles from database.*/
 $sql_handle = "SELECT hd_handle FROM denic_handle.denic_handle group by hd_handle order by hd_handle";
 $sql_holder_selected = "SELECT dm_holder FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
 $sql_admin_selected = "SELECT dm_admin FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
 $sql_tech_selected = "SELECT dm_tech  FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
-$sql_zone_selected = "SELECT dm_zone FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
-;
+$sql_zone_selected = "SELECT dm_zone FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";;
 $sql_fill = "SELECT * FROM denic_handle.denic_domain WHERE dm_id = '$_POST[dm_domain]'";
 
 $result_holder = $mysqli->query($sql_handle);
@@ -55,21 +55,25 @@ if (!$result_fill) {
 
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
-    <?php include('navi.inc'); ?>
+    <?php include('navigation.inc'); ?>
     <h2>edit domain</h2>
 </div>
 
 <div class="_body">
-    <form action="domain_admin3.php" method="POST">
+    <form action="domain_admin_result.php" method="POST">
         <select name="dm_action" title="dm_action" size="1">
             <option>CHHOLDER</option>
             <option selected>UPDATE</option>
         </select><br>
 
         Domain
-        <input name="dm_domain" title="dm_domain_ace" size="20" value="<?php echo "$dm_domain"; ?>"><br>
+        <label>
+            <input name="dm_domain" title="dm_domain_ace" size="20" value="<?php echo "$dm_domain"; ?>">
+        </label><br>
         Domain ACE
-        <input name="dm_domain_ace" title="dm_domain_ace" size="80" value="<?php echo "$dm_domain_ace"; ?>"><br>
+        <label>
+            <input name="dm_domain_ace" title="dm_domain_ace" size="80" value="<?php echo "$dm_domain_ace"; ?>">
+        </label><br>
 
         Holder
         <?php
@@ -136,19 +140,28 @@ if (!$result_fill) {
         ?>
 
         NServer
-        <input name="dm_ns_0" title="dm_ns_0" size="80" value="<?php echo "$dm_ns_0"; ?>"><br>
+        <label>
+            <input name="dm_ns_0" title="dm_ns_0" size="80" value="<?php echo "$dm_ns_0"; ?>">
+        </label><br>
 
         NServer
-        <input name="dm_ns_1" title="dm_ns_1" size="80" value="<?php echo "$dm_ns_1"; ?>"><br>
+        <label>
+            <input name="dm_ns_1" title="dm_ns_1" size="80" value="<?php echo "$dm_ns_1"; ?>">
+        </label><br>
+        NServer
+        <label>
+            <input name="dm_ns_2" title="dm_ns_2" size="80" value="<?php echo "$dm_ns_2"; ?>">
+        </label><br>
 
         NServer
-        <input name="dm_ns_2" title="dm_ns_2" size="80" value="<?php echo "$dm_ns_2"; ?>"><br>
-
-        NServer
-        <input name="dm_ns_3" title="dm_ns_3" size="80" value="<?php echo "$dm_ns_3"; ?>"><br>
+        <label>
+            <input name="dm_ns_3" title="dm_ns_3" size="80" value="<?php echo "$dm_ns_3"; ?>">
+        </label><br>
 
         Dnskey
-        <input name="dm_ns_4" title="dm_key" size="80" value="<?php echo "$dm_key"; ?>"><br>
+        <label>
+            <input name="dm_key" title="dm_key" size="80" value="<?php echo "$dm_key"; ?>">
+        </label><br>
 
         <input type="submit" value="edit domain">
     </form>

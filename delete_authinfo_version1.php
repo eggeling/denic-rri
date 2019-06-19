@@ -9,11 +9,14 @@
 <?php
 /* Include the variables for your database connection by editing database-default.inc and renaming it to database.inc.*/
 require("database.inc");
+
 $mysqli = new mysqli($sqlhost, $sqluser, $sqlpass, $database);
 if ($mysqli->connect_error) {
     die('Connect Error (' . $mysqli->connect_errno . ') '
         . $mysqli->connect_error);
 }
+
+/* Retrieve domains with active authinfo from database.*/
 $result = $mysqli->query('SELECT * FROM denic.domain WHERE dm_authinfo = \'1\' group by dm_domain order by dm_domain ');
 if (!$result) {
     echo "<p>Could not retrieve data.</p>";
@@ -22,12 +25,12 @@ if (!$result) {
 
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
-    <?php include('navi.inc'); ?>
+    <?php include('navigation.inc'); ?>
     <h2>delete authinfo version 1</h2>
 </div>
 
 <div class="_body">
-    <form action="delete-authinfo2.php" method="POST">
+    <form action="delete_authinfo_verison1_result.php" method="POST">
 
         <?php
         echo "<select name=\"dm_domain\">\n";
