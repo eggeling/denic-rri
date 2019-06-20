@@ -30,7 +30,7 @@ if (!$result) {
 </div>
 
 <div class="_body">
-    <form action="delete_authinfo_verison1_result.php" method="POST">
+    <form action="delete_authinfo_version1_result.php" method="POST">
 
         <?php
         echo "<select name=\"dm_domain\">\n";
