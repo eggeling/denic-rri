@@ -16,7 +16,7 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve domains from database.*/
-$sql = "SELECT dm_id, dm_domain, dm_domain_ace FROM denic.domain group by dm_domain order by dm_domain";
+$sql = "SELECT dm_id, dm_domain, dm_domain_ace FROM denic.domain dm_domain order by dm_domain";
 $result = $mysqli->query($sql);
 if (!$result) {
     echo "<p>Could not retrieve data.</p>";

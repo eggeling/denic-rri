@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
         . $mysqli->connect_error);
 }
 
-$sql = "SELECT dm_id, dm_domain, dm_domain_ace from denic.domain group by dm_domain ORDER BY `domain`.`dm_domain`;";
+$sql = "SELECT dm_id, dm_domain, dm_domain_ace from denic.domain ORDER BY `domain`.`dm_domain`;";
 $result = $mysqli->query($sql) or die ("Couldn't execute query.");
 
 if (!$result) {

@@ -16,7 +16,7 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve handles from database.*/
-$sql_handle = "SELECT hd_handle FROM denic.handle group by hd_handle order by hd_handle";
+$sql_handle = "SELECT hd_handle FROM denic.handle order by hd_handle";
 $sql_holder_selected = "SELECT dm_holder FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
 $sql_admin_selected = "SELECT dm_admin FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";
 $sql_tech_selected = "SELECT dm_tech  FROM denic.domain WHERE dm_id = '$_POST[dm_domain]'";

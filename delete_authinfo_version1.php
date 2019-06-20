@@ -17,7 +17,7 @@ if ($mysqli->connect_error) {
 }
 
 /* Retrieve domains with active authinfo from database.*/
-$result = $mysqli->query('SELECT * FROM denic.domain WHERE dm_authinfo = \'1\' group by dm_domain order by dm_domain ');
+$result = $mysqli->query('SELECT * FROM denic.domain WHERE dm_authinfo = \'1\' order by dm_domain ');
 if (!$result) {
     echo "<p>Could not retrieve data.</p>";
 }

@@ -138,7 +138,7 @@
                 "dm_ns_3 = \"" . $_POST['dm_ns_3'] . "\", " .
                 "dm_key = \"" . $_POST['dm_key'] . "\"";
 
-           $result = $mysqli->query("UPDATE domain SET $domain_admin WHERE domain.dm_domain = '$_POST[dm_domain]'");
+           $result = $mysqli->query("UPDATE denic.domain SET $domain_admin WHERE domain.dm_domain = '$_POST[dm_domain]'");
             if (!$result) {
                 echo "<p>Could not retrieve data.</p>";
                 echo $mysqli->error;
