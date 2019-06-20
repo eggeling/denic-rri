@@ -9,7 +9,7 @@
 <div class="_head">
     /* Customize navigation.inc to include your own navigation.*/
     <?php include('navigation.inc'); ?>
-    <h2>delete domain<</h2>
+    <h2>delete domain</h2>
 </div>
 
 <div class="_body">
