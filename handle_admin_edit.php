@@ -54,7 +54,7 @@ $result_cc_selected = $mysqli->query($sql_cc_selected);
 ?>
 
 <div class="_head">
-    /* Customize navigation.inc to include your own navigation.*/
+    <!-- Customize navigation.inc to include your own navigation.-->
     <?php include('navigation.inc'); ?>
     <h2>edit handle</h2>
 </div>

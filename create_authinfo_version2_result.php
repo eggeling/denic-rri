@@ -7,7 +7,7 @@
 <body>
 
 <div class="_head">
-    /* Customize navigation.inc to include your own navigation.*/
+    <!-- Customize navigation.inc to include your own navigation.-->
     <?php include('navigation.inc'); ?>
     <h2>create authinfo version 2</h2>
 </div>

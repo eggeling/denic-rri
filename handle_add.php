@@ -25,7 +25,7 @@ if (!$result_cc) {
 ?>
 
 <div class="_head">
-    /* Customize navigation.inc to include your own navigation.*/
+    <!-- Customize navigation.inc to include your own navigation.-->
     <?php include('navigation.inc'); ?>
     <h2>add handle</h2>
 </div>

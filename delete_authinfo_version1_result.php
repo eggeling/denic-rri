@@ -8,7 +8,7 @@
 
 
 <div class="_head">
-    /* Customize navigation.inc to include your own navigation.*/
+    <!-- Customize navigation.inc to include your own navigation.-->
     <?php include('navigation.inc'); ?>
     <h2>delete authinfo version 1</h2>
 </div>

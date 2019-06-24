@@ -24,7 +24,7 @@ if (!$result) {
 ?>
 
 <div class="_head">
-    /* Customize navigation.inc to include your own navigation.*/
+    <!-- Customize navigation.inc to include your own navigation.-->
     <?php include('navigation.inc'); ?>
     <h2>edit domain</h2>
 </div>
