@@ -1,8 +1,5 @@
-/* Simple navigation to be included in php files
-
-The boolean value from the authentication.php file is used to display the current environment.
-
-*/
+<!-- Simple navigation to be included in php files -->
+<!-- The boolean value from the authentication.php file is used to display the current environment.-->
 
 <ul>
     <li><a href="handle_add.php">create handle</a></li>
